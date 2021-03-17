@@ -1,0 +1,72 @@
+set nocompatible
+filetype off
+
+" vundle.vim
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'gmarik/Vundle.vim'
+
+" basic
+
+Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'vim-scripts/a.vim'
+Plugin 'majutsushi/tagbar'
+Plugin 'fholgado/minibufexpl.vim'
+
+"Plugin 'fatih/vim-go'
+
+call vundle#end()
+
+filetype plugin indent on
+
+filetype plugin indent on
+
+" auto source .vimrc
+autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+set expandtab
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+syntax on
+set showmatch
+set matchtime=5
+set number 
+set mouse=a
+set selection=exclusive
+set selectmode=mouse,key
+set nobackup
+set shiftround
+set incsearch
+set hlsearch
+set ignorecase
+set wildmenu
+set ruler
+set cursorline
+set nowrap
+set backspace=indent,eol,start
+set nobackup
+set noswapfile
+set laststatus=2
+set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%04l,%04v][%p%%]\ [LEN=%L]
+
+" leader map
+let mapleader=","
+
+" minibufexpl
+
+" ctrlp.vim
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" a.vim
+nmap <F4> :A<CR>
+
+" nerdtree
+nmap <leader>d :NERDTreeToggle<CR>
+nmap <silent> <F2> :NERDTreeToggle<cr>
+
+" tagbar
+nmap <silent> <F3> :TagbarToggle<cr>

@@ -1,0 +1,8 @@
+[user]
+	name = wardenlym
+	email = wardenlym@gmail.com
+	signingkey = 49A9D35E
+[commit]
+	gpgsign = true
+[gpg]
+	program = gpg2
