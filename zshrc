@@ -107,7 +107,7 @@ fi
 
 source $ZSH/oh-my-zsh.sh
 
-#powerline-daemon -q
-#. /usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
+powerline-daemon -q
+. /usr/lib/python3.9/site-packages/powerline/bindings/zsh/powerline.zsh
 
 export GPG_TTY=$(tty)
