@@ -118,7 +118,6 @@ source $ZSH/oh-my-zsh.sh
 powerline-daemon -q
 . /usr/lib/python3.10/site-packages/powerline/bindings/zsh/powerline.zsh
 
-export GPG_TTY=$(tty)
 export PATH="$PATH:$HOME/bin"
 
 export DISPLAY=`cat /etc/resolv.conf | grep nameserver | awk '{print $2}'`:0
@@ -132,3 +131,6 @@ export BROWSER=wslview
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# GPG tty must be last down
+export GPG_TTY=$(tty)
