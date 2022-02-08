@@ -127,7 +127,7 @@ export PATH="$PATH:$HOME/.mix/escripts"
 
 export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
-export BROWSER=wslview
+#export BROWSER=wslview
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
