@@ -1,9 +1,25 @@
 " auto source .vimrc
-autocmd BufWritePost $MYVIMRC source $MYVIMRC
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'preservim/nerdtree' , { 'on': 'NERDTreeToggle' }
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " leader
 let mapleader = ","
 let g:mapleader = ","
+
+" fzf
+nnoremap <silent> <C-p> :Files<CR>
+nnoremap <silent> <C-k> :Buffers<CR>
+
+" nerdtree
+nmap <leader>d :NERDTreeToggle<CR>
+nmap <silent> <F2> :NERDTreeToggle<cr>
+
+""" plugin end
 
 " basic
 set expandtab
@@ -31,6 +47,6 @@ set nobackup
 set noswapfile
 
 " powerline
-set rtp+=/usr/lib/python3.9/site-packages/powerline/bindings/vim
+set rtp+=/usr/lib/python3.10/site-packages/powerline/bindings/vim
 set laststatus=2
 "set t_Co=256
