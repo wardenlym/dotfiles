@@ -79,7 +79,7 @@ DISABLE_AUTO_UPDATE="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(kubectl minikube git docker golang mix)
+plugins=(kubectl minikube git docker golang mix terraform)
 
 
 # User configuration
@@ -132,5 +132,9 @@ export PATH="$PATH:/mnt/c/Program Files/Oracle/VirtualBox"
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
+
 # GPG tty must be last down
 export GPG_TTY=$(tty)
+
+# qiniu go proxy
+#go env -w GOPROXY=https://goproxy.cn
